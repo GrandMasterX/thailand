@@ -1,0 +1,125 @@
+.connected-carousels {
+    position: relative;
+	margin-top: 130px;
+}
+
+/** Carousel **/
+
+.stage {
+position: relative;
+width: 3009px;
+margin-top: 240px;
+margin-right: auto;
+margin-left: 47%;
+}
+
+.stage ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.stage li {
+float: left;
+height: 420px;
+position: relative;
+max-width: 820px;
+min-width: 420px;
+margin-right: 60px;
+z-index:5;
+margin-left: 60px;
+-webkit-transition: all 0.2s ease-out;
+-moz-transition: all 0.2s ease;
+-o-transition: all 0.2;
+}
+
+.stage img {
+    display: block;
+    max-width: 100%;
+    height: auto !important;
+}
+
+/** Carousel Controls **/
+
+/** Carousel Pagination **/
+
+.carousel-navigation {
+    position: absolute;
+	top:-225px;
+	left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    margin: 0;
+	width: 1024px;
+	height: 135px;
+	overflow: hidden;
+}
+
+.carousel-navigation li{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+}
+
+.jcarousel-pagination a.active {
+    background: #4E443C;
+    color: #fff;
+    opacity: 1;
+
+    -webkit-box-shadow: 0 0 2px #F0EFE7;
+    -moz-box-shadow: 0 0 2px #F0EFE7;
+    box-shadow: 0 0 2px #F0EFE7;
+}
+@media screen and (max-width: 2900px) {
+	.stage { margin-left:45%}
+}
+@media screen and (max-width: 2700px) {
+	.stage { margin-left:44%}
+}
+@media screen and (max-width: 2500px) {
+	.stage { margin-left:44%}
+}
+@media screen and (max-width: 2300px) {
+	.stage {margin-left: 44%;}
+}
+@media screen and (max-width: 2100px) {
+	.stage { margin-left:44%}
+}
+@media screen and (max-width: 1900px) {
+	.stage { margin-left:42%}
+}
+@media screen and (max-width: 1700px) {
+	.stage { margin-left:42%}
+}
+@media screen and (max-width: 1500px) {
+	.stage { margin-left:40%}
+}
+@media screen and (max-width: 1300px) {
+	.stage { margin-left:40%}
+}
+@media screen and (max-width: 1100px) {
+	.stage { margin-left:40%}
+}
+@media screen and (max-width: 900px) {
+	.stage { margin-left:40%}
+}
+@media screen and (max-width: 800px) {
+	.stage { margin-left:40%}
+}
+@media screen and (max-width: 700px) {
+	.stage { margin-left:40%}
+}
+
+@media screen and (max-width: 600px) {
+	.stage { margin-left:40%}
+}
+
+@media screen and (max-width: 500px) {
+	.stage { margin-left:40%}
+}
+@media screen and (max-width: 400px) {
+	.stage { margin-left:40%}
+}

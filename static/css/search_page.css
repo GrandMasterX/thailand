@@ -1,0 +1,148 @@
+.container {}
+.container .wrap {}
+.container .wrap .block {margin: 28px 0px 20px;}
+.container .wrap .top_search {background-color: #0bb7db; width: auto; padding: 22px 18px 22px 24px;
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.container .wrap .top_search .text_search {width: 72%;}
+.container .wrap .top_search .text_search h5 {font-size: 22px; color: #fff; line-height: 22px; text-align: left;
+		margin: 0px; font-weight: normal; padding-bottom: 7px;}
+.container .wrap .top_search .text_search h5 span {text-transform: uppercase;}
+.container .wrap .top_search .text_search p {margin: 0; font-size: 14px; color: #fff; line-height: 20px;
+		font-family: Arial, Verdana, 'Bree Serif'; text-align: left;}
+
+.container .wrap .top_search .form_select {width: 23%;}
+.container .wrap .top_search .form_select .item.price {padding-top: 9px;}
+.container .wrap .top_search .form_select .item.price label {font-size: 14px; display: inline-block;
+		line-height: 14px; text-transform: uppercase; font-family: Arial, Verdana, 'Bree Serif';
+		color: #fff;}
+
+.container .wrap .bottom_search {}
+.container .wrap .bottom_search .modify {background-color: #fff; width: auto;
+		margin-top: 28px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+		margin-top: 0px;}
+.container .wrap .bottom_search .modify a {display: block; text-decoration: none; padding-left: 38px;
+		background: url('../img/modify_arrow.png') no-repeat; font-size: 12px; color: #0bb7db;
+		line-height: 36px; height: 36px; font-family: Arial, Verdana, 'Bree Serif'; text-align: left;
+		text-transform: uppercase;}
+
+.container .wrap .transport {}
+.container .wrap .transport h5 {font-size: 24px; color: #3d3d3d; line-height: 24px; font-weight: normal;
+		margin: 0px; text-align: left; padding-bottom: 5px;}
+.container .wrap .transport .orders_wrap {}
+.container .wrap .transport .orders_wrap table {width: 100%; background-color: #fff;
+		-webkit-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);
+		-moz-box-shadow:    0px 2px 2px 0px rgba(50, 50, 50, 0.75);
+		box-shadow:         0px 2px 2px 0px rgba(50, 50, 50, 0.75);}
+.container .wrap .transport .orders_wrap table tbody {}
+.container .wrap .transport .orders_wrap table tbody .block_pad {}
+.container .wrap .transport .orders_wrap table tbody .block_pad td {padding: 14px 0px;}
+.container .wrap .transport .orders_wrap table tbody .block_pad .img.check {
+		vertical-align: top; padding: 14px 10px;}
+.container .wrap .transport .orders_wrap table tbody .block_pad.time .img.check {padding: 25px 0px 25px 10px;}
+.container .wrap .transport .orders_wrap table tbody .block_pad.time .race,
+.container .wrap .transport .orders_wrap table tbody .block_pad.time .img .time.stop {text-transform: uppercase;
+		color: #aaa; font-size: 12px; line-height: 12px;}
+.container .wrap .transport .orders_wrap table tbody .block_pad.time .race span {text-transform: none;
+		color: #aaa;}
+.container .wrap .transport .orders_wrap table tbody .block_pad.time .img {}
+
+.container .wrap .transport .orders_wrap table tbody .block_pad .img span.time {padding-left: 20px;
+		line-height: 12px; color: #0bb7da; font-size: 12px; font-family: Arial, Verdana, 'Bree Serif';}
+.container .wrap .transport .orders_wrap table tbody .block_pad .img span.price {position: absolute;
+		left: 7px; color: #fff; font-family: Arial, Verdana, 'Bree Serif'; font-size: 14px;
+		line-height: 48px;}
+.container .wrap .transport .orders_wrap table tbody .block_pad .race,
+.container .wrap .transport .orders_wrap table tbody .block_pad .race div {font-size: 14px; color: #000;
+		font-family: Arial, Verdana, 'Bree Serif'; line-height: 18px; text-align: left;
+		text-transform: uppercase;}
+.container .wrap .transport .orders_wrap table tbody .block_pad .race span,
+.container .wrap .transport .orders_wrap table tbody .block_pad .race div span {font-size: 12px;
+		color: #777; line-height: 14px; font-family: Arial, Verdana, 'Bree Serif';
+		text-transform: none;}
+.container .wrap .transport .orders_wrap table tbody .block_pad .race div span {color: #fff;}
+.container .wrap .transport .orders_wrap table tbody .block_pad .race .price_bg {
+		position: relative; background: url('../img/price_table.png') no-repeat; 
+		width: 48px; height: 48px; text-align: center; line-height: 48px;}
+.container .wrap .transport .orders_wrap table tbody .block_pad .race {text-transform: none;}
+.container .wrap .transport .orders_wrap table tbody .block_pad .race span.line {text-decoration: line-through;
+		font-size: 12px; color: #999; line-height: 14px;}
+
+.container .wrap .transport .orders_wrap table tbody.no_active .block_pad .race,
+.container .wrap .transport .orders_wrap table tbody.no_active .block_pad .race span {color: #aaa;}
+.container .wrap .transport .orders_wrap table tbody.no_active .block_pad .race div span.min {
+		font-size: 16px; color: #999; line-height: 16px; font-family: Arial, Verdana, 'Bree Serif';
+		text-align: right;}
+
+
+.container .wrap .transport .orders_wrap table tbody.divider tr td {height: 0px; border-bottom: 1px solid #ddd;}
+/*.orders_wrap table tbody.divider:hover tr td {background-color: transparent;}*/
+/*.orders_wrap table tbody.divider tr td {height: 0px; border-top: 1px solid #424242; border-bottom: 1px solid #424242;}*/
+.orders_wrap table tbody.divider:last-of-type tr td {border-bottom: none;}
+/*.orders_wrap table tbody.divider:first-of-type tr td {border-top: none;}*/
+/* TABLE */
+
+/*.orders_wrap table {background-color: #f1f1f1;}*/
+
+/* WINDOW */
+.orders_wrap table tbody tr .img div img.ico_table {margin: 0 3px;}
+.orders_wrap table tbody .info_window {background: url('../img/info.png') no-repeat top left; height: 23px; width: 22px;
+        display: block; margin: 8px 0px 3px;}
+.orders_wrap table tbody tr.info {display: none;}
+.orders_wrap table tbody tr.info td {text-align: center; color: #484848; font-size: 12px;
+        line-height: 14px;}
+.orders_wrap table tbody tr.info td.list {white-space: nowrap; text-align: left;}
+.orders_wrap table tbody tr.info td ul {list-style-type: none;}
+/* END WINDOW */
+
+
+.orders_wrap table tbody tr {border-bottom: 1px dashed #6684D9;}
+.orders_wrap table tbody tr:last-of-type {border: none;}
+.orders_wrap table tbody:hover tr td {background-color: #d5d2d2;}
+
+
+.orders_wrap table tbody tr .det_race,
+.orders_wrap table tbody tr .race_price,
+.orders_wrap table tbody tr .race_time,
+.orders_wrap table tbody tr .race_date,
+.orders_wrap table tbody tr .race_from,
+.orders_wrap table tbody tr .race_to {text-transform: uppercase; font-size: 13px;
+                                      line-height: 13px; color: #000; text-align: center;}
+.orders_wrap table tbody tr .race_price {text-transform: none; font-weight: bold;
+                                         font-size: 14px;}
+.orders_wrap table tbody tr .race_price span {font-weight: normal; font-size: 13px;
+                                              line-height: 13px;}
+.orders_wrap table tbody tr .race_date,
+.orders_wrap table tbody tr .race_from,
+.orders_wrap table tbody tr .race_to {color: #0075A6; text-transform: none;}
+.orders_wrap table tbody tr .race_btn {text-align: right; padding-right: 5px;}
+.orders_wrap table tbody tr .race_btn button {
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+    padding: 5px;
+    background: #4bbcda;
+    background: -moz-linear-gradient(top,  #4bbcda 0%, #006196 70%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4bbcda), color-stop(70%,#006196));
+    background: -webkit-linear-gradient(top,  #4bbcda 0%,#006196 70%);
+    background: -o-linear-gradient(top,  #4bbcda 0%,#006196 70%);
+    background: -ms-linear-gradient(top,  #4bbcda 0%,#006196 70%);
+    background: linear-gradient(to bottom,  #4bbcda 0%,#006196 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4bbcda', endColorstr='#006196',GradientType=0 );
+}
+.orders_wrap table tbody tr .race_btn button:hover {
+    background: #006196;
+    background: -moz-linear-gradient(top,  #006196 0%, #4bbcda 70%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#006196), color-stop(70%,#4bbcda));
+    background: -webkit-linear-gradient(top,  #006196 0%,#4bbcda 70%);
+    background: -o-linear-gradient(top,  #006196 0%,#4bbcda 70%);
+    background: -ms-linear-gradient(top,  #006196 0%,#4bbcda 70%);
+    background: linear-gradient(to bottom,  #006196 0%,#4bbcda 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006196', endColorstr='#4bbcda',GradientType=0 );
+}
+/* END TABLE */

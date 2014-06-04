@@ -1,0 +1,285 @@
+/* Tiny Scrollbar */
+#scrollbar-cart {width: 280px;
+height: 260px;
+margin-top: -45px;
+margin-left: -5px;}
+#scrollbar-cart .viewport {width: 274px;
+height: 260px;
+overflow: hidden;
+position: relative;}
+#scrollbar-cart .overview { list-style: none;
+position: absolute;
+left: 0;
+top: 0;
+padding: 0;
+margin: 0;
+width: 274px;
+height: 260px; }
+#scrollbar-cart .scrollbar{ background: transparent url(../img/bg-scrollbar-track-y.png) no-repeat 0 0;
+position: relative;
+background-position: 0 0;
+float: left;
+width: 4px;
+height: 260px !important}
+#scrollbar-cart .track {width: 5px;
+position: relative;
+padding: 0 1px;
+height: 260px !important; 
+margin-left: -1px;}
+#scrollbar-cart .thumb {background: transparent url(../img/bg-scrollbar-thumb-y.png) no-repeat 50% 100%;
+height: 20px;
+width: 5px;
+cursor: pointer;
+overflow: hidden;
+position: absolute;
+top: 0;
+left: 0px;}
+#scrollbar-cart .thumb .end { background: transparent url(../img/bg-scrollbar-thumb-y.png) no-repeat 50% 0;
+overflow: hidden;
+height: 5px;
+width: 25px;
+display: none; }
+#scrollbar-cart .disable { display: none; }
+
+
+
+
+
+#scrollbar-order {
+width: 345px;
+height: 100px;
+margin-left: 113px;}
+#scrollbar-order .viewport {width: 340px;
+height: 100px;
+overflow: hidden;
+position: relative;}
+#scrollbar-order .overview { list-style: none;
+position: absolute;
+left: 0;
+top: 0;
+padding: 0;
+margin: 0;
+width: 345px;
+height: 100px; }
+#scrollbar-order .scrollbar{ background: transparent url(../img/bg-scrollbar-track-y.png) no-repeat 0 0;
+position: relative;
+background-position: 0 0;
+float: right;
+width: 4px;
+height: 100px !important}
+#scrollbar-order .track {width: 5px;
+position: relative;
+padding: 0 1px;
+height: 100px !important; 
+margin-left: -1px;}
+#scrollbar-order .thumb {background: transparent url(../img/bg-scrollbar-thumb-y.png) no-repeat 50% 100%;
+height: 20px;
+width: 5px;
+cursor: pointer;
+overflow: hidden;
+position: absolute;
+top: 0;
+left: 0px;}
+#scrollbar-order .thumb .end { background: transparent url(../img/bg-scrollbar-thumb-y.png) no-repeat 50% 0;
+overflow: hidden;
+height: 5px;
+width: 25px;
+display: none; }
+#scrollbar-order .disable { display: none; }
+
+
+#scrollbar-description {
+width: 265px;
+height: 300px;}
+#scrollbar-description .viewport {width: 255px;
+height: 300px;
+overflow: hidden;
+position: relative;}
+#scrollbar-description .overview { list-style: none;
+position: absolute;
+left: 0;
+top: 0;
+padding: 0;
+margin: 0;
+width: 254px;
+height: 300px; }
+#scrollbar-description .scrollbar{ background: #5ABCE4;
+position: relative;
+background-position: 0 0;
+float: right;
+width: 4px;
+height: 300px !important}
+#scrollbar-description .track {width: 5px;
+position: relative;
+padding: 0 1px;
+height: 300px !important;
+margin-left: -1px; }   
+#scrollbar-description .thumb {background: transparent url(../img/bg-scrollbar-thumb-y.png) no-repeat 50% 100%;
+height: 20px;
+width: 5px;
+cursor: pointer;
+overflow: hidden;
+position: absolute;
+top: 0;
+left: 0px;}
+#scrollbar-description .thumb .end { background: transparent url(../img/bg-scrollbar-thumb-y.png) no-repeat 50% 0;
+overflow: hidden;
+height: 5px;
+width: 25px;
+display: none; }
+#scrollbar-description .disable { display: none; }
+
+
+
+
+#scrollbar-review {
+width: 1020px;
+height: 302px;}
+#scrollbar-review .viewport {
+width: 1015px;
+height: 302px;
+overflow: hidden;
+position: relative;
+margin-top: -5px;}
+#scrollbar-review .overview { list-style: none;
+position: absolute;
+left: 0;
+top: 0;
+padding: 0;
+margin: 0;
+width: 1010px;
+height: 302px;}
+#scrollbar-review .scrollbar{ background: #5ABCE4;
+position: relative;
+background-position: 0 0;
+float: right;
+width: 5px;
+height: 302px !important}
+#scrollbar-review .track {width: 5px;
+position: relative;
+padding: 0 1px;
+height: 302px !important; }
+#scrollbar-review .thumb {background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 100%;
+height: 20px;
+width: 5px;
+cursor: pointer;
+overflow: hidden;
+position: absolute;
+top: 0;
+left: 0px;}
+#scrollbar-review .thumb .end { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 0;
+overflow: hidden;
+height: 5px;
+width: 25px;
+display: none; }
+#scrollbar-review .disable { display: none; }
+
+
+@media screen and (min-width: 2900px) {
+		#scrollbar-review{width:2550px;}
+		.reviewsBlock{width: 70%;}
+	#scrollbar-review .viewport{width:2540px;}
+	#scrollbar-review .overview{width:2540px;}}
+
+@media screen and (max-width: 2900px) {
+	
+	#scrollbar-review{width:1435px;}
+	.reviewsBlock{width: 64%;}
+	#scrollbar-review .viewport{width:1425px;}
+	#scrollbar-review .overview{width:1425px;}
+}
+
+
+@media screen and (max-width: 2600px) {
+	#scrollbar-review{width:1705px;}
+	.reviewsBlock{width: 53%;}
+	#scrollbar-review .viewport{width:1695px;}
+	#scrollbar-review .overview{width:1695px;}
+}
+
+@media screen and (max-width: 2200px) {
+	#scrollbar-review{width:750px;}
+	.reviewsBlock{width: 53%;}
+	#scrollbar-review .viewport{width:740px;}
+	#scrollbar-review .overview{width:740px;}
+}
+
+@media screen and (max-width: 1920px) {
+	#scrollbar-review{width:590px;}
+	.reviewsBlock{width: 51%;}
+	#scrollbar-review .viewport{width:580px;}
+	#scrollbar-review .overview{width:580px;}
+}
+
+@media screen and (max-width: 1680px) {	
+#scrollbar-review{width:280px;}
+.reviewsBlock{width: 42%;}
+	#scrollbar-review .viewport{width:270px;}
+	#scrollbar-review .overview{width:270px;}	
+}
+@media screen and (max-width: 1440px) {
+	#scrollbar-review{width:120px;}
+	.reviewsBlock{width:35%;}
+	#scrollbar-review .viewport{width:120px;}
+	#scrollbar-review .overview{width:120px;}
+	}
+	
+@media screen and (max-width: 1330px) {
+	#scrollbar-review{width:880px;}
+	.reviewsBlock{width: 51%;}
+	#scrollbar-review .viewport{width:870px;}
+	#scrollbar-review .overview{width:870px;}
+	}
+
+@media screen and (max-width: 1190px) {
+	#scrollbar-review{width:700px;}
+	.reviewsBlock{width: 51%;}
+	#scrollbar-review .viewport{width:690px;}
+	#scrollbar-review .overview{width:690px;}
+}
+
+@media screen and (max-width: 1050px) {
+	#scrollbar-review{width:540px;}
+	.reviewsBlock{width: 51%;}
+	#scrollbar-review .viewport{width:530px;}
+	#scrollbar-review .overview{width:530px;}
+
+}
+
+@media screen and (max-width: 945px) {
+	#scrollbar-review{width:380px;}
+	.reviewsBlock{width: 51%;}
+	#scrollbar-review .viewport{width:370px;}
+	#scrollbar-review .overview{width:370px;}
+
+}
+
+@media screen and (max-width: 750px) {
+	#scrollbar-review{width:300px;}
+	.reviewsBlock{width: 51%;}
+	#scrollbar-review .viewport{width:290px;}
+	#scrollbar-review .overview{width:290px;}
+
+}
+
+
+@media screen and (max-width: 400px) {
+	#scrollbar-review{width:100px;}
+	#scrollbar-review .viewport{width:100px;}
+	#scrollbar-review .overview{width:100px;}
+
+}
+
+@media screen and (max-width: 300px) {
+	#scrollbar-review{width:100px;}
+	#scrollbar-review .viewport{width:100px;}
+	#scrollbar-review .overview{width:100px;}
+
+}
+
+
+
+
+
+
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
