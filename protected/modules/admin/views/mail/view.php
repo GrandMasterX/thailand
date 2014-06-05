@@ -26,7 +26,7 @@ $this->breadcrumbs=array(
 	'icon' => 'pencil white',
 	'label'=>'Редактировать',
 )); ?>
-	
+
 <?php $this->widget('bootstrap.widgets.TbButton', array(
 	'type'=>'danger',
 	'url' => array('/admin/mail/admin'),

@@ -7,6 +7,13 @@ class AdminModule extends CWebModule
     {
         parent::init();
 
+        Yii::app()->theme = 'admin';
+
+        $this->setImport(array(
+            'admin.models.*',
+            'admin.components.*',
+        ));
+
         Yii::app()->configure(array(
             'components'=>array(
                 'errorHandler'=>array(
@@ -15,9 +22,18 @@ class AdminModule extends CWebModule
             ),
         ));
 
-        $this->import=array(
-            'admin.components.*',
-        );
+    }
+
+    public function beforeControllerAction($controller, $action)
+    {
+        if(parent::beforeControllerAction($controller, $action))
+        {
+            // this method is called before any module controller action is performed
+            // you may place customized code here
+            return true;
+        }
+        else
+            return false;
     }
 
 

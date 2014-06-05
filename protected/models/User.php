@@ -16,7 +16,7 @@ class User extends CActiveRecord {
     private $_state = array();
     public  $unhashed_password;
     public  $auth_role;
-
+    const ROLE_ADMIN = 'admin@admin';
     public static function model($className = __CLASS__)
     {
         return parent::model($className);
@@ -117,5 +117,26 @@ class User extends CActiveRecord {
     public static function t($str = '', $params = array())
     {
         return Yii::t('user', $str, $params);
+    }
+
+    public function search()
+    {
+        // @todo Please modify the following code to remove attributes that should not be searched.
+
+        $criteria=new CDbCriteria;
+        //$criteria->with = array('group');
+
+        $criteria->compare('id',$this->id,true);
+        $criteria->compare('email',$this->email,true);
+        $criteria->compare('password',$this->password,true);
+        $criteria->compare('firstName',$this->firstName,true);
+        $criteria->compare('middleName',$this->middleName,true);
+        $criteria->compare('lastName',$this->lastName,true);
+        $criteria->compare('role',$this->role,true);
+        //$criteria->compare('create_time',$this->create_time,true);
+
+        return new SearchDataProvider($this, array(
+            'criteria'=>$criteria,
+        ));
     }
 } 

@@ -6,6 +6,8 @@ class MailController extends AdminController
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
+    //public $layout = '/layouts/main';
+
 	public function actionView($id)
 	{
 		$this->render('view',array(
@@ -92,7 +94,7 @@ class MailController extends AdminController
 		$model=new Mail('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Mail']))
-			$model->attributes=$_GET['Mail'];
+			$model->attributes = $_GET['Mail'];
 		$this->render('admin',array(
 			'model'=>$model,
 		));

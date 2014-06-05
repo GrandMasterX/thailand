@@ -5,10 +5,36 @@
  */
 class AdminController extends Controller
 {
-    public $layout = '//layouts/main';
+    public $layout = '/layouts/main';
 
     public $pageTitle = 'Администрирование';
     public $defaultAction = 'admin';
+
+    public function filters()
+    {
+        return array(
+            'accessControl'
+        );
+    }
+
+    public function accessRules()
+    {
+        return array(
+            array('allow',
+                'users'=>array('@'),
+            ),
+            /*array('allow',
+                'actions'=>array('login'),
+                'users'=>array('*'),
+            ),
+            array('deny',
+                'users'=>array('*'),
+                'deniedCallback' => function() {
+                        Yii::app()->controller->redirect('/admin/auth/login');
+                    }
+            ),*/
+        );
+    }
 	
     public function init()
     {

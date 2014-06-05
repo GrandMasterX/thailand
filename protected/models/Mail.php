@@ -36,8 +36,6 @@ class Mail extends CActiveRecord
         return array(
         );
     }
-	
-
 
     public function attributeLabels()
     {

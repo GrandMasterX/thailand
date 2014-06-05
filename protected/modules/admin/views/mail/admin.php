@@ -8,7 +8,7 @@
 <h1>Почта (шаблоны)</h1>
 
 <?php $this->widget('modules.admin.components.Toolbar', array(
-	'model'=>$model 
+	'model'=>$model
 )) ?>
 
 <div class="create-form" style="display: none">
@@ -25,7 +25,7 @@
 	'columns'=>array(
 		array(
 			'class'=>'modules.admin.components.AdminCheckBoxColumn',
-        ),	
+        ),
 		array(
 			'header'=>'#',
 			'name'=>'id',

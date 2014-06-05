@@ -32,10 +32,10 @@
 			'htmlOptions'=>array('style'=>'width: 50px'),
 		),
 		array(
-			'name'=>'last_name',
+			'name'=>'lastName',
 			'type'=>'raw',
 			'value'=>function($data, $roe) {
-				return CHtml::link("{$data->last_name} {$data->first_name}", array('/admin/administrator/update', 'id'=>$data->id));
+				return CHtml::link("{$data->lastName} {$data->lastName}", array('/admin/administrator/update', 'id'=>$data->id));
 			}
 		),
 		'email',

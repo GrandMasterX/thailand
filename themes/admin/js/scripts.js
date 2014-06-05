@@ -16,8 +16,8 @@ $(function() {
 	   	$('.hide-sidebar').show();
 	  	$('#sidebar').show('fast');
 	});
-	
-	$('.title-transliterate').transliterate({
+
+	/*$('.title-transliterate').transliterate({
 		input: 'alias-transliterate',
 		table: [
 			['А', 'a'], ['Б', 'b'], ['В', 'v'], ['Г', 'g'], ['Д', 'd'], ['Е', 'e'], ['Ё', 'yo'], ['Ж', 'zh'],
@@ -33,7 +33,7 @@ $(function() {
 			[' ', '-'],
 		]
 	});
-	
+
 	$('.title_transliterate').transliterate({
 		input: 'alias_transliterate',
 		table: [
@@ -50,7 +50,8 @@ $(function() {
 			[' ', '_'],
 		]
 	});
-	
+	*/
+
 	$('#menu a').on('click', function() {
 		var ul = $(this).next('ul');
 		var block = ul.parent().parent();
