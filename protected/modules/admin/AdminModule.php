@@ -21,7 +21,6 @@ class AdminModule extends CWebModule
                 ),
             ),
         ));
-
     }
 
     public function beforeControllerAction($controller, $action)
@@ -35,6 +34,4 @@ class AdminModule extends CWebModule
         else
             return false;
     }
-
-
 }

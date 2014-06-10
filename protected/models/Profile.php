@@ -22,7 +22,7 @@ class Profile extends CActiveRecord {
             array('email','email', 'message'=>"The email isn't correct"),
             array('email','unique', 'message'=>"This email is already in use"),
             array('phone', 'match', 'pattern'=>'/[0-9]/'),
-            array('id, firstName, lastName, birthdate, passport, psprt_date, citizenship, phone, email', 'safe'),
+            array('id, firstName, lastName, birthday, passport, gender, psprt_date, citizenship, phone, email', 'safe'),
         );
     }
 

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Июн 04 2014 г., 18:23
+-- Время создания: Июн 10 2014 г., 17:51
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -24184,6 +24184,26 @@ INSERT INTO `content` (`id`, `alias`, `description`, `content`, `is_blocked`, `a
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `groups`
+--
+
+CREATE TABLE IF NOT EXISTS `groups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `user_id` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Дамп данных таблицы `groups`
+--
+
+INSERT INTO `groups` (`id`, `title`, `user_id`) VALUES
+(1, 'Моя группа11', 11);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `mail`
 --
 
@@ -24195,21 +24215,52 @@ CREATE TABLE IF NOT EXISTS `mail` (
   `sort` int(10) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `name` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Дамп данных таблицы `mail`
 --
 
 INSERT INTO `mail` (`id`, `name`, `subject`, `template`, `sort`) VALUES
-(1, 'contactForm', 'Новое сообщение - %subject% - форма обратной связи', '<strong>ФИО: </strong>%name%<br>\r\n<strong>Email: </strong>%email%<br>\r\n<strong>Тема сообщения: </strong>%subject%<br>\r\n<strong>Текст: </strong>%body%<br>', 0),
-(2, 'successRegister', 'Благодарим за регистрацию!', '<h2>Благодарим за регистрацию на сайте интернет-магазина &laquo;INDAST&raquo;</h2>\r\n\r\n<p>Данные для доступа к личному кабинету:<br />\r\n<strong>Логин:</strong> %username%<br />\r\n<strong>Пароль:</strong> %password%</p>\r\n\r\n<p>Для завершения регистрации, Вам необходимо перейти по ссылке:<br />\r\n<a href="%confirmLink%" target="_balank">Подтвердить регистрацию</a></p>\r\n', 0),
+(1, 'contactForm', 'Новое сообщение - %subject% ', '<strong>ФИО: </strong>%name%<br>\r\n<strong>Email: </strong>%email%<br>\r\n<strong>Тема сообщения: </strong>%subject%<br>\r\n<strong>Текст: </strong>%body%<br>', 0),
+(2, 'successRegister', 'Благодарим за регистрацию!', '<h2>Благодарим за регистрацию на сайте</h2>\r\n\r\n<p>Данные для доступа к личному кабинету:<br />\r\n<strong>Логин:</strong> %username%<br />\r\n<strong>Пароль:</strong> %password%</p>\r\n\r\n<p>Для завершения регистрации, Вам необходимо перейти по ссылке:<br />\r\n<a href="%confirmLink%" target="_balank">Подтвердить регистрацию</a></p>\r\n', 0),
 (3, 'successRegisterToAdmin', 'На сайте зарегистрирован новый пользователь!', '<h2>На сайте %siteNameLink% зарегистрирован новый пользователь!</h2>\r\n\r\n<p>Данные:<br>\r\n<strong>Логин:</strong> %username% <br>\r\n<strong>E-mail:</strong> %email% <br>\r\n<strong>Пароль:</strong> %password% </p>\r\n', 0),
 (4, 'callbackForm', 'Обратный звонок', '<strong>Телефон: </strong>%phone%<br>', 0),
-(5, 'passwordReset', 'Смена пароля на сайте INDAST', '<h2>Смена пароля</h2>\r\n\r\n<p>Для смены пароля необходимо перейти по ссылке:<br />\r\n<a href="%confirmLink%" target="_balank">Смена пароля</a></p>\r\n', 0),
+(5, 'passwordReset', 'Смена пароля на сайте', '<h2>Смена пароля</h2>\r\n\r\n<p>Для смены пароля необходимо перейти по ссылке:<br />\r\n<a href="%confirmLink%" target="_balank">Смена пароля</a></p>\r\n', 0),
 (6, 'orderAdminForm', 'Новый заказ на сайте', '<p><strong>Имя: </strong>%name%<br />\r\n<strong>Email: </strong>%email%<br />\r\n<strong>Телефон: </strong>%phone%<br />\r\n<strong>Тип доставки: </strong>%delivery%<br />\r\n<strong>Способ оплаты: </strong>%payment%<br />\r\n<strong>Адрес доставки: </strong>%address%<br />\r\n<strong>Дополнительная информация: </strong>%description%<br />\r\n<strong>Сумма заказа: </strong>%sum%<br />\r\n<strong>Дата заказа: </strong>%createTtime%</p>\r\n\r\n<p>%products%</p>', 0),
-(7, 'orderUserForm', 'Ваш заказ на сайте INDAST', '<p><strong>Имя: </strong>%name%<br />\r\n<strong>Email: </strong>%email%<br />\r\n<strong>Телефон: </strong>%phone%<br />\r\n<strong>Тип доставки: </strong>%delivery%<br />\r\n<strong>Способ оплаты: </strong>%payment%<br />\r\n<strong>Адрес доставки: </strong>%address%<br />\r\n<strong>Дополнительная информация: </strong>%description%<br />\r\n<strong>Сумма заказа: </strong>%sum%<br />\r\n<strong>Дата заказа: </strong>%createTtime%</p>\r\n\r\n<p>%products%</p>', 0),
-(8, 'moderationUserForm', 'Ваш заказ на сайте INDAST подтверждён', '<p><strong>Имя: </strong>%name%<br />\r\n<strong>Email: </strong>%email%<br />\r\n<strong>Телефон: </strong>%phone%<br />\r\n<strong>Тип доставки: </strong>%delivery%<br />\r\n<strong>Адрес доставки: </strong>%address%<br />\r\n<strong>Дополнительная информация: </strong>%description%<br />\r\n<strong>Сумма заказа: </strong>%sum%<br />\r\n<strong>Дата заказа: </strong>%createTtime%</p>\r\n\r\n<p>%details%</p>\r\n<p>%products%</p>', 0);
+(7, 'orderUserForm', 'Ваш заказ на сайте', '<p><strong>Имя: </strong>%name%<br />\r\n<strong>Email: </strong>%email%<br />\r\n<strong>Телефон: </strong>%phone%<br />\r\n<strong>Тип доставки: </strong>%delivery%<br />\r\n<strong>Способ оплаты: </strong>%payment%<br />\r\n<strong>Адрес доставки: </strong>%address%<br />\r\n<strong>Дополнительная информация: </strong>%description%<br />\r\n<strong>Сумма заказа: </strong>%sum%<br />\r\n<strong>Дата заказа: </strong>%createTtime%</p>\r\n\r\n<p>%products%</p>\r\n', 0),
+(8, 'moderationUserForm', 'Ваш заказ на сайте подтверждён', '<p><strong>Имя: </strong>%name%<br />\r\n<strong>Email: </strong>%email%<br />\r\n<strong>Телефон: </strong>%phone%<br />\r\n<strong>Тип доставки: </strong>%delivery%<br />\r\n<strong>Адрес доставки: </strong>%address%<br />\r\n<strong>Дополнительная информация: </strong>%description%<br />\r\n<strong>Сумма заказа: </strong>%sum%<br />\r\n<strong>Дата заказа: </strong>%createTtime%</p>\r\n\r\n<p>%details%</p>\r\n\r\n<p>%products%</p>\r\n', 0),
+(9, 'registerViaSocial', 'Благодарим за регистрацию!', '<p>Благодарим за регистрацию на сайте!</p>\r\n', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `templates`
+--
+
+CREATE TABLE IF NOT EXISTS `templates` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstName` varchar(255) NOT NULL,
+  `lastName` varchar(255) NOT NULL,
+  `middleName` varchar(255) NOT NULL,
+  `birthdate` varchar(255) NOT NULL,
+  `passport` varchar(255) NOT NULL,
+  `psprt_date` varchar(255) NOT NULL,
+  `citizenship` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Дамп данных таблицы `templates`
+--
+
+INSERT INTO `templates` (`id`, `firstName`, `lastName`, `middleName`, `birthdate`, `passport`, `psprt_date`, `citizenship`, `phone`, `email`, `user_id`, `group_id`) VALUES
+(1, '222eqweqweqwe', 'qwe', 'qq', 'qwe', 'qw', 'qw', 'qw', 'qwqweqwe', '', 11, 0),
+(2, '1', 'qwe', 'qq', 'qwe', 'qw', 'qw', 'qw', 'qw', '', 11, 0);
 
 -- --------------------------------------------------------
 
@@ -24222,7 +24273,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `firstName` varchar(255) NOT NULL,
   `lastName` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `birthdate` date NOT NULL,
+  `birthday` date NOT NULL,
   `passport` varchar(255) NOT NULL,
   `psprt_date` date NOT NULL,
   `citizenship` varchar(255) NOT NULL,
@@ -24230,19 +24281,21 @@ CREATE TABLE IF NOT EXISTS `users` (
   `is_blocked` int(11) NOT NULL DEFAULT '0',
   `is_backend_user` int(11) NOT NULL DEFAULT '0',
   `password` varchar(255) NOT NULL,
+  `role` enum('client','manager','admin') NOT NULL,
+  `middleName` varchar(255) NOT NULL,
+  `gender` varchar(20) NOT NULL,
+  `status` smallint(1) NOT NULL DEFAULT '0',
+  `confirm_code` varchar(128) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `birthdate`, `passport`, `psprt_date`, `citizenship`, `phone`, `is_blocked`, `is_backend_user`, `password`) VALUES
-(2, 'Taras', 'Sosyedka', 'deler2007@ukr.net', '0000-00-00', '', '0000-00-00', '', '', 0, 0, ''),
-(3, 'Тарас', 'Сосєдка', 'zgrandmasterz@gmail.com', '0000-00-00', '', '0000-00-00', '', '', 0, 0, ''),
-(4, '', '', 'new@ukr.net', '0000-00-00', '', '0000-00-00', '', '', 0, 0, 'asdasd'),
-(5, '', '', '111new@ukr.net', '0000-00-00', '', '0000-00-00', '', '', 0, 0, 'asdasd'),
-(6, '', '', 'qweqwe111new@ukr.net', '0000-00-00', '', '0000-00-00', '', '', 0, 0, 'qweqweqwe');
+INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `birthday`, `passport`, `psprt_date`, `citizenship`, `phone`, `is_blocked`, `is_backend_user`, `password`, `role`, `middleName`, `gender`, `status`, `confirm_code`) VALUES
+(11, '', '', 'zgrandmasterz@gmail.com', '0000-00-00', '', '0000-00-00', '', '', 0, 0, '', 'client', '', 'other', 0, ''),
+(12, '', '', 'deler2007@ukr.net', '1989-08-19', '', '0000-00-00', '', '', 0, 0, '', 'client', '', 'm', 0, '');
 
 -- --------------------------------------------------------
 
@@ -24266,8 +24319,8 @@ CREATE TABLE IF NOT EXISTS `user_oauth` (
 --
 
 INSERT INTO `user_oauth` (`user_id`, `provider`, `identifier`, `profile_cache`, `session_data`) VALUES
-(3, 'Facebook', '746694068716342', 'a:22:{s:10:"identifier";s:15:"746694068716342";s:10:"webSiteURL";s:0:"";s:10:"profileURL";s:60:"https://www.facebook.com/app_scoped_user_id/746694068716342/";s:8:"photoURL";s:71:"https://graph.facebook.com/746694068716342/picture?width=150&height=150";s:11:"displayName";s:15:"Taras  Sosyedka";s:11:"description";s:13:"Другой.";s:9:"firstName";s:5:"Taras";s:8:"lastName";s:8:"Sosyedka";s:6:"gender";s:4:"male";s:8:"language";N;s:3:"age";N;s:8:"birthDay";i:19;s:10:"birthMonth";i:8;s:9:"birthYear";i:1989;s:5:"email";s:17:"deler2007@ukr.net";s:13:"emailVerified";s:17:"deler2007@ukr.net";s:5:"phone";N;s:7:"address";N;s:7:"country";N;s:6:"region";s:7:"Boyarka";s:4:"city";N;s:3:"zip";N;}', 'a:5:{s:35:"hauth_session.facebook.is_logged_in";s:4:"i:1;";s:41:"hauth_session.facebook.token.access_token";s:194:"s:185:"CAAXERp4CBxsBANnHZBOEDc17gibFMeQwsjsJcAThC9pXb4AiApiP6ZBWjlzZBUltmuBgA2wqvglyXmKozy9R6aL96NNZBgN2jfZAWPRZBnGZA0MqkNHHQvsWN9VRMNhfIIrTuTwTi1GTJCVXKhMDvWUYAwp5Ht3T4Lzem3LvIEMpZCQ92ijbKmcY";";s:36:"hauth_session.google.hauth_return_to";s:51:"s:43:"http://localhost/site/oauth?provider=Google";";s:35:"hauth_session.google.hauth_endpoint";s:53:"s:45:"http://localhost/site/oauth?hauth.done=Google";";s:39:"hauth_session.google.id_provider_params";s:330:"a:5:{s:15:"hauth_return_to";s:43:"http://localhost/site/oauth?provider=Google";s:11:"hauth_token";s:26:"ti1in1vfcciplafoaq4ao8dbv5";s:10:"hauth_time";i:1401803710;s:11:"login_start";s:68:"http://localhost/site/oauth?hauth.start=Google&hauth.time=1401803710";s:10:"login_done";s:45:"http://localhost/site/oauth?hauth.done=Google";}";}'),
-(3, 'Google', '111874589596139136224', 'a:22:{s:10:"identifier";s:21:"111874589596139136224";s:10:"webSiteURL";N;s:10:"profileURL";s:49:"https://profiles.google.com/111874589596139136224";s:8:"photoURL";s:92:"https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg";s:11:"displayName";s:25:"Тарас Сосєдка";s:11:"description";N;s:9:"firstName";s:10:"Тарас";s:8:"lastName";s:14:"Сосєдка";s:6:"gender";s:5:"other";s:8:"language";s:2:"ru";s:3:"age";N;s:8:"birthDay";N;s:10:"birthMonth";N;s:9:"birthYear";N;s:5:"email";s:23:"zgrandmasterz@gmail.com";s:13:"emailVerified";s:23:"zgrandmasterz@gmail.com";s:5:"phone";N;s:7:"address";N;s:7:"country";N;s:6:"region";N;s:4:"city";N;s:3:"zip";N;}', 'a:5:{s:39:"hauth_session.google.token.access_token";s:75:"s:67:"ya29.KgDK0d2DLNW7iB8AAAAuls0CJYAbLEeHzX0GXIGl2gIjeZkVPAvdxjNomFBngA";";s:40:"hauth_session.google.token.refresh_token";s:7:"s:0:"";";s:37:"hauth_session.google.token.expires_in";s:7:"i:3598;";s:37:"hauth_session.google.token.expires_at";s:13:"i:1401890837;";s:33:"hauth_session.google.is_logged_in";s:4:"i:1;";}');
+(12, 'Facebook', '746694068716342', 'a:22:{s:10:"identifier";s:15:"746694068716342";s:10:"webSiteURL";s:0:"";s:10:"profileURL";s:60:"https://www.facebook.com/app_scoped_user_id/746694068716342/";s:8:"photoURL";s:71:"https://graph.facebook.com/746694068716342/picture?width=150&height=150";s:11:"displayName";s:15:"Taras  Sosyedka";s:11:"description";s:13:"Другой.";s:9:"firstName";s:5:"Taras";s:8:"lastName";s:8:"Sosyedka";s:6:"gender";s:4:"male";s:8:"language";N;s:3:"age";N;s:8:"birthDay";i:19;s:10:"birthMonth";i:8;s:9:"birthYear";i:1989;s:5:"email";s:17:"deler2007@ukr.net";s:13:"emailVerified";s:17:"deler2007@ukr.net";s:5:"phone";N;s:7:"address";N;s:7:"country";N;s:6:"region";s:7:"Boyarka";s:4:"city";N;s:3:"zip";N;}', 'a:7:{s:39:"hauth_session.google.token.access_token";s:75:"s:67:"ya29.LgAUy3bg5puoNh8AAAB_On1q0ESBPEeY9GWSEE0w2Iex7rebBmfelpN-_4KL3g";";s:40:"hauth_session.google.token.refresh_token";s:7:"s:0:"";";s:37:"hauth_session.google.token.expires_in";s:7:"i:3597;";s:37:"hauth_session.google.token.expires_at";s:13:"i:1402395812;";s:33:"hauth_session.google.is_logged_in";s:4:"i:1;";s:35:"hauth_session.facebook.is_logged_in";s:4:"i:1;";s:41:"hauth_session.facebook.token.access_token";s:198:"s:189:"CAAXERp4CBxsBACEOritZCpzgiXL7ZBp54D83DCRU2FeQxKZBtVqOqXwBBsZCfxuK5sv0ZBwUfZCw3M6EqhC78FxaUL6mUvvKr7DqaMieyqQ5ZAogom4bVEEHsZBPMuRIEDwfDL3RG1RyT4HmXcd0Klr7ZAtYlonx3aQxAZAxfbOhZBNP3j3iAPECZARM";";}'),
+(11, 'Google', '111874589596139136224', 'a:22:{s:10:"identifier";s:21:"111874589596139136224";s:10:"webSiteURL";N;s:10:"profileURL";s:49:"https://profiles.google.com/111874589596139136224";s:8:"photoURL";s:92:"https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg";s:11:"displayName";s:25:"Тарас Сосєдка";s:11:"description";N;s:9:"firstName";s:10:"Тарас";s:8:"lastName";s:14:"Сосєдка";s:6:"gender";s:5:"other";s:8:"language";s:2:"ru";s:3:"age";N;s:8:"birthDay";N;s:10:"birthMonth";N;s:9:"birthYear";N;s:5:"email";s:23:"zgrandmasterz@gmail.com";s:13:"emailVerified";s:23:"zgrandmasterz@gmail.com";s:5:"phone";N;s:7:"address";N;s:7:"country";N;s:6:"region";N;s:4:"city";N;s:3:"zip";N;}', 'a:7:{s:39:"hauth_session.google.token.access_token";s:75:"s:67:"ya29.LgAUy3bg5puoNh8AAAB_On1q0ESBPEeY9GWSEE0w2Iex7rebBmfelpN-_4KL3g";";s:40:"hauth_session.google.token.refresh_token";s:7:"s:0:"";";s:37:"hauth_session.google.token.expires_in";s:7:"i:3597;";s:37:"hauth_session.google.token.expires_at";s:13:"i:1402395812;";s:33:"hauth_session.google.is_logged_in";s:4:"i:1;";s:35:"hauth_session.facebook.is_logged_in";s:4:"i:1;";s:41:"hauth_session.facebook.token.access_token";s:198:"s:189:"CAAXERp4CBxsBACEOritZCpzgiXL7ZBp54D83DCRU2FeQxKZBtVqOqXwBBsZCfxuK5sv0ZBwUfZCw3M6EqhC78FxaUL6mUvvKr7DqaMieyqQ5ZAogom4bVEEHsZBPMuRIEDwfDL3RG1RyT4HmXcd0Klr7ZAtYlonx3aQxAZAxfbOhZBNP3j3iAPECZARM";";}');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -198,6 +198,7 @@ class HOAuthAction extends CAction
 			$userProfile = $oAuth->profile;
 			// If we already have a user logged in, associate the authenticated 
 			// provider with the logged-in user
+
 			if(!Yii::app()->user->isGuest) 
 			{
 				$accessCode = 1;
@@ -206,10 +207,12 @@ class HOAuthAction extends CAction
 			else 
 			{
 				$newUser = false;
+
 				if($oAuth->isBond)
 				{
 					// this social network account is bond to existing local account
 					Yii::log("Logged in with existing link with '$provider' provider", CLogger::LEVEL_INFO, 'hoauth.'.__CLASS__);
+
 					if($this->useYiiUser)
 						$user = User::model()->findByPk($oAuth->user_id);
 					else
@@ -234,14 +237,12 @@ class HOAuthAction extends CAction
 						$newUser = true;
 					}
 
-					/*if($this->alwaysCheckPass || $user->isNewRecord)
+					if($this->alwaysCheckPass || $user->isNewRecord)
 						if(method_exists($this->controller, 'hoauthProcessUser')) {
                             $this->processUser($user, $userProfile);
                         } else {
                             $user = $this->processUser($user, $userProfile);
                         }
-                    */
-                    User::setSocialData($oAuth->profile,$user->id);
 				}
 
 				// checking if current user is not banned or anything else
@@ -380,6 +381,15 @@ class HOAuthAction extends CAction
 			if(!$user->save())
 				throw new Exception("Error, while saving {$this->model} model:\n\n" . var_export($user->errors, true));
 
+            $adminEmail = Yii::app()->config->get('adminEmail');
+            $mailFrom = Yii::app()->config->get('mailFrom');
+
+            //Отправляем сообщение пользователю о успешной регистрации
+            @Yii::app()->getModule('mail')->send($user->email, $mailFrom, 'successRegister', array(
+                'siteNameLink' => CHtml::link(Yii::app()->config->get('siteName'), Yii::app()->createAbsoluteUrl(Yii::app()->homeUrl)),
+                'username' => $user->email,
+            ));
+
 			// trying to send activation email
 			$this->sendActivationEmail($user);
 
@@ -450,7 +460,7 @@ class HOAuthAction extends CAction
 				switch($pAtt)
 				{
 					case 'genderShort':
-					$gender = array('female'=>'f','male'=>'m');
+					$gender = array('female'=>'f','male'=>'m','other'=>'other');
 					$att = $gender[$profile->gender];
 					break;
 					case 'birthDate':

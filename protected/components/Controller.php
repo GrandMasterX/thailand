@@ -33,7 +33,7 @@ class Controller extends CController
 		}
             
 			
-		$this->pageTitle = 'Aminka';//Yii::app()->config->get('siteName');
+		$this->pageTitle = 'Aminka';
     }
 	
 	protected function performAjaxValidation($model, $form)

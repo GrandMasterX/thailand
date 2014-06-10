@@ -51,7 +51,7 @@ class SiteController extends Bus {
                 @Yii::app()->getModule('mail')->send($model->email, $mailFrom, 'successRegister', array(
                     'siteNameLink' => CHtml::link(Yii::app()->config->get('siteName'), Yii::app()->createAbsoluteUrl(Yii::app()->homeUrl)),
                     'username' => $model->email,
-                    'password' => $password,
+                    'password' => $model->password,
                     'confirmLink'=>Yii::app()->createAbsoluteUrl('/user/auth/activation', array('code'=>$model->confirm_code))
                 ));
                 Yii::app()->request->redirect(Yii::app()->user->returnUrl);
@@ -104,7 +104,7 @@ class SiteController extends Bus {
             if (Yii::app()->request->isAjaxRequest)
                 echo $error['message'];
             else
-                $this->render('error', $error);
+                $this->render('error',array('data' =>$error));
         }
 	}
 
@@ -132,6 +132,11 @@ class SiteController extends Bus {
             $this->redirect('/site/index');
             return;
         }
+    }
+
+    public function actionLogout() {
+        Yii::app()->user->logout();
+        $this->redirect(Yii::app()->user->returnUrl);
     }
 
     public function actionSocialLogin()

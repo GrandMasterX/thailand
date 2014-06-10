@@ -4119,6 +4119,7 @@ class CWebUser extends CApplicationComponent implements IWebUser
 	public function login($identity,$duration=0)
 	{
 		$id=$identity->getId();
+
 		$states=$identity->getPersistentStates();
 		if($this->beforeLogin($id,$states,false))
 		{
