@@ -25,6 +25,7 @@ return array(
         'application.modules.mobile',
         'application.modules.privatoffice',
         'application.modules.admin',
+        'application.modules.mail',
         'ext.eoauth.*',
         'ext.eoauth.lib.*',
         'ext.lightopenid.*',
@@ -35,6 +36,7 @@ return array(
         'mobile',
         'privatoffice',
         'admin',
+        'mail',
     ),
 
 	// application components

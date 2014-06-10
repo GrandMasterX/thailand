@@ -37,7 +37,7 @@ class Mail extends CActiveRecord
         );
     }
 	
-	public function behaviors()
+	/*public function behaviors()
 	{
 		return array(
             'LoggerBehavior' => array(
@@ -52,7 +52,7 @@ class Mail extends CActiveRecord
                 },
             ),
 		);
-	}	
+	}*/
 
     public function attributeLabels()
     {

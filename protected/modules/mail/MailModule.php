@@ -69,6 +69,7 @@ class MailModule extends CWebModule
             $message->addTo(trim($v));
 
         $message->from = $from;
+
         return Yii::app()->mail->send($message);
     }
 

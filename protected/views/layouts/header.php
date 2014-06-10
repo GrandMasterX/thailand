@@ -46,6 +46,7 @@
                             </div>
                             <!-- END REGISTRATION -->
                         </li>
+
                         <? $this->renderPartial('/layouts/social');?>
                     <?} else {
                         $this->renderPartial('/layouts/logged_social');

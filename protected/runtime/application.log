@@ -31316,3 +31316,105 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/logout
 ---
+2014/06/10 18:13:07 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.config" is not defined.' in Z:\home\localhost\www\framework\yiilite.php:610
+Stack trace:
+#0 Z:\home\localhost\www\framework\yiilite.php(917): CComponent->__get('config')
+#1 Z:\home\localhost\www\protected\controllers\SiteController.php(47): CModule->__get('config')
+#2 Z:\home\localhost\www\framework\yiilite.php(4058): SiteController->actionRegister()
+#3 Z:\home\localhost\www\framework\yiilite.php(3570): CInlineAction->runWithParams(Array)
+#4 Z:\home\localhost\www\framework\yiilite.php(3555): CController->runAction(Object(CInlineAction))
+#5 Z:\home\localhost\www\framework\yiilite.php(3545): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 Z:\home\localhost\www\framework\yiilite.php(1746): CController->run('register')
+#7 Z:\home\localhost\www\framework\yiilite.php(1666): CWebApplication->runController('site/register')
+#8 Z:\home\localhost\www\framework\yiilite.php(1191): CWebApplication->processRequest()
+#9 Z:\home\localhost\www\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/register
+HTTP_REFERER=http://localhost/
+---
+2014/06/10 18:25:24 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.config" is not defined.' in Z:\home\localhost\www\framework\yiilite.php:610
+Stack trace:
+#0 Z:\home\localhost\www\framework\yiilite.php(917): CComponent->__get('config')
+#1 Z:\home\localhost\www\protected\controllers\SiteController.php(52): CModule->__get('config')
+#2 Z:\home\localhost\www\framework\yiilite.php(4058): SiteController->actionRegister()
+#3 Z:\home\localhost\www\framework\yiilite.php(3570): CInlineAction->runWithParams(Array)
+#4 Z:\home\localhost\www\framework\yiilite.php(3555): CController->runAction(Object(CInlineAction))
+#5 Z:\home\localhost\www\framework\yiilite.php(3545): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 Z:\home\localhost\www\framework\yiilite.php(1746): CController->run('register')
+#7 Z:\home\localhost\www\framework\yiilite.php(1666): CWebApplication->runController('site/register')
+#8 Z:\home\localhost\www\framework\yiilite.php(1191): CWebApplication->processRequest()
+#9 Z:\home\localhost\www\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/register
+HTTP_REFERER=http://localhost/
+---
+2014/06/10 18:25:58 [error] [exception.CException] exception 'CException' with message 'Alias "behaviors.LoggerBehavior" is invalid. Make sure it points to an existing directory or file.' in Z:\home\localhost\www\framework\yiilite.php:187
+Stack trace:
+#0 Z:\home\localhost\www\framework\yiilite.php(87): YiiBase::import('behaviors.Logge...', true)
+#1 Z:\home\localhost\www\framework\yiilite.php(728): YiiBase::createComponent(Array)
+#2 Z:\home\localhost\www\framework\yiilite.php(714): CComponent->attachBehavior('LoggerBehavior', Array)
+#3 Z:\home\localhost\www\framework\yiilite.php(7383): CComponent->attachBehaviors(Array)
+#4 Z:\home\localhost\www\protected\modules\mail\models\Mail.php(16): CActiveRecord::model('Mail')
+#5 Z:\home\localhost\www\protected\modules\mail\MailModule.php(58): Mail::model()
+#6 Z:\home\localhost\www\protected\controllers\SiteController.php(56): MailModule->send('qweqwe111new@uk...', 'zgrandmasterz@g...', 'successRegister', Array)
+#7 Z:\home\localhost\www\framework\yiilite.php(4058): SiteController->actionRegister()
+#8 Z:\home\localhost\www\framework\yiilite.php(3570): CInlineAction->runWithParams(Array)
+#9 Z:\home\localhost\www\framework\yiilite.php(3555): CController->runAction(Object(CInlineAction))
+#10 Z:\home\localhost\www\framework\yiilite.php(3545): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\localhost\www\framework\yiilite.php(1746): CController->run('register')
+#12 Z:\home\localhost\www\framework\yiilite.php(1666): CWebApplication->runController('site/register')
+#13 Z:\home\localhost\www\framework\yiilite.php(1191): CWebApplication->processRequest()
+#14 Z:\home\localhost\www\index.php(22): CApplication->run()
+#15 {main}
+REQUEST_URI=/register
+HTTP_REFERER=http://localhost/
+---
+2014/06/10 18:26:55 [error] [php] Trying to get property of non-object (Z:\home\localhost\www\protected\modules\mail\views\default\view.php:14)
+Stack trace:
+#0 Z:\home\localhost\www\framework\yiilite.php(3822): SiteController->renderFile()
+#1 Z:\home\localhost\www\protected\modules\mail\MailModule.php(63): SiteController->renderPartial()
+#2 Z:\home\localhost\www\protected\controllers\SiteController.php(56): MailModule->send()
+#3 Z:\home\localhost\www\framework\yiilite.php(4058): SiteController->actionRegister()
+#4 Z:\home\localhost\www\framework\yiilite.php(3570): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\framework\yiilite.php(3555): SiteController->runAction()
+#6 Z:\home\localhost\www\framework\yiilite.php(3545): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\framework\yiilite.php(1746): SiteController->run()
+#8 Z:\home\localhost\www\framework\yiilite.php(1666): CWebApplication->runController()
+#9 Z:\home\localhost\www\framework\yiilite.php(1191): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\index.php(22): CWebApplication->run()
+REQUEST_URI=/register
+2014/06/10 18:27:38 [error] [php] Trying to get property of non-object (Z:\home\localhost\www\protected\modules\mail\views\default\view.php:14)
+Stack trace:
+#0 Z:\home\localhost\www\framework\yiilite.php(3822): SiteController->renderFile()
+#1 Z:\home\localhost\www\protected\modules\mail\MailModule.php(63): SiteController->renderPartial()
+#2 Z:\home\localhost\www\protected\controllers\SiteController.php(56): MailModule->send()
+#3 Z:\home\localhost\www\framework\yiilite.php(4058): SiteController->actionRegister()
+#4 Z:\home\localhost\www\framework\yiilite.php(3570): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\framework\yiilite.php(3555): SiteController->runAction()
+#6 Z:\home\localhost\www\framework\yiilite.php(3545): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\framework\yiilite.php(1746): SiteController->run()
+#8 Z:\home\localhost\www\framework\yiilite.php(1666): CWebApplication->runController()
+#9 Z:\home\localhost\www\framework\yiilite.php(1191): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\index.php(22): CWebApplication->run()
+REQUEST_URI=/register
+2014/06/10 18:28:00 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.config" is not defined.' in Z:\home\localhost\www\framework\yiilite.php:610
+Stack trace:
+#0 Z:\home\localhost\www\framework\yiilite.php(917): CComponent->__get('config')
+#1 Z:\home\localhost\www\protected\modules\mail\views\default\view.php(49): CModule->__get('config')
+#2 Z:\home\localhost\www\framework\yiilite.php(3419): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\framework\yiilite.php(3398): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\framework\yiilite.php(3822): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\protected\modules\mail\MailModule.php(63): CController->renderPartial('modules.mail.vi...', Array, true)
+#6 Z:\home\localhost\www\protected\controllers\SiteController.php(56): MailModule->send('ezrael@ukr.net', 'zgrandmasterz@g...', 'successRegister', Array)
+#7 Z:\home\localhost\www\framework\yiilite.php(4058): SiteController->actionRegister()
+#8 Z:\home\localhost\www\framework\yiilite.php(3570): CInlineAction->runWithParams(Array)
+#9 Z:\home\localhost\www\framework\yiilite.php(3555): CController->runAction(Object(CInlineAction))
+#10 Z:\home\localhost\www\framework\yiilite.php(3545): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\localhost\www\framework\yiilite.php(1746): CController->run('register')
+#12 Z:\home\localhost\www\framework\yiilite.php(1666): CWebApplication->runController('site/register')
+#13 Z:\home\localhost\www\framework\yiilite.php(1191): CWebApplication->processRequest()
+#14 Z:\home\localhost\www\index.php(22): CApplication->run()
+#15 {main}
+REQUEST_URI=/register
+HTTP_REFERER=http://localhost/
+---

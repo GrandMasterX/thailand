@@ -40,16 +40,16 @@ class SiteController extends Bus {
 
     public function actionRegister() {
         if(isset($_POST['User'])) {
+
             $model = new User('registration');
             $model->attributes = $_POST['User'];
+
             if($model->validate() && $model->save()) {
                 Yii::app()->user->setFlash('registration_ok','Thank you for registration! Check your email and for now you could log in');
-                $adminEmail = Yii::app()->config->get('adminEmail');
-                $mailFrom = Yii::app()->config->get('mailFrom');
 
                 //Отправляем сообщение пользователю о успешной регистрации
-                @Yii::app()->getModule('mail')->send($model->email, $mailFrom, 'successRegister', array(
-                    'siteNameLink' => CHtml::link(Yii::app()->config->get('siteName'), Yii::app()->createAbsoluteUrl(Yii::app()->homeUrl)),
+                Yii::app()->getModule('mail')->send($model->email, 'zgrandmasterz@gmail.com', 'successRegister', array(
+                    'siteNameLink' => CHtml::link('localhost', Yii::app()->createAbsoluteUrl(Yii::app()->homeUrl)),
                     'username' => $model->email,
                     'password' => $model->password,
                     'confirmLink'=>Yii::app()->createAbsoluteUrl('/user/auth/activation', array('code'=>$model->confirm_code))
