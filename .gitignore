@@ -13,6 +13,7 @@ protected/runtime/*
 protected/runtime/application.log
 protected/runtime/debug_errors.txt
 protected/runtime/state.bin
+protected/config/main.php
 uploads/*
 webstat/*
 uploads/.gitkeep
