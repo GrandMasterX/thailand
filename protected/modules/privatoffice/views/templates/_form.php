@@ -8,6 +8,7 @@
     ),
 )); ?>
 
+
 	<?php echo $form->errorSummary($model); ?>
 	<?php echo $form->textFieldRow($model,'firstName',array('class'=>'span5','maxlength'=>60)); ?>
 	<?php echo $form->textFieldRow($model,'lastName',array('class'=>'span5','maxlength'=>60)); ?>

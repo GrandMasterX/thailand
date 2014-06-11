@@ -38,7 +38,6 @@ $this->breadcrumbs=array(
                     return CHtml::link($data->name, array('/privatoffice/templates/update', 'id'=>$data->id));
                 }
         ),
-        'id',
         array(
             'class'=>'modules.privatoffice.components.AdminButtonColumn',
         ),

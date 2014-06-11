@@ -36,6 +36,7 @@ class Groups extends CActiveRecord {
 
         $criteria->compare('id', $this->id, true);
         $criteria->compare('title', $this->title, true);
+        $criteria->compare('user_id', array(Yii::app()->user->id,0), true,'OR');
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,

@@ -26,6 +26,7 @@ return array(
         'application.modules.privatoffice',
         'application.modules.admin',
         'application.modules.mail',
+        'modules.mail.models.*',
         'ext.eoauth.*',
         'ext.eoauth.lib.*',
         'ext.lightopenid.*',
@@ -53,6 +54,19 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
+        'mail' => array(
+            'class' => 'mail.extensions.yii-mail.YiiMail',
+            'transportType' => 'smtp',
+            'transportOptions' => array(
+                'host' => 'smtp.gmail.com',
+                'username' => 'xxx@gmail.com',
+                'password' => 'XXXX',
+                'port' => '465',
+                'encryption'=>'tls',
+            ),
+            'logging' => true   ,
+            'dryRun' => false
+        ),
         'bootstrap' => array(
             'class' => 'ext.bootstrap.components.Bootstrap',
             'responsiveCss' => true,
